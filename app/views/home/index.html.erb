@@ -8,7 +8,7 @@
   <div class="col-md-5 col-md-offset-5">
   <%= form_for Listing.new, method: :get, url: search_path, class: "navbar-form navbar-left" do |f| %>
     <%= text_field_tag :term, params[:term], placeholder:"Where do you wanna go?" %>
-    <%= form.country_select("location") %>
+    <%= f.country_select("location") %>
     <%= f.submit 'search', class: 'btn btn-primary' %>
   <% end %>
    </div>
